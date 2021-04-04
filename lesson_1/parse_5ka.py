@@ -34,7 +34,7 @@ class Parse5ka:
                 yield product
 
     def _save(self, data: Dict, file_path: Path):
-        file_path.write_text(json.dumps(data, ensure_ascii=False))
+        file_path.write_text(json.dumps(data, ensure_ascii=False), encoding='utf-8')
 
 
 class CategoriesParser(Parse5ka):
